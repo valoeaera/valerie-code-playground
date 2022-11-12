@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Do fancy stuff with colors
+BLK='\033[0;30m'
+RED='\033[0;31m'
+GRN='\033[0;32m'
+BRN='\033[0;33m'
+BLU='\033[0;34m'
+PRP='\033[0;35m'
+CYN='\033[0;36m'
+LGRY='\033[0;37m'
+GRY='\033[1;30m'
+LRED='\033[1;31m'
+LGRN='\033[1;32m'
+YLW='\033[1;33m'
+LBLU='\033[1;34m'
+LPRP='\033[1;35m'
+LCYN='\033[1;36m'
+WHT='\033[1;37m'
+RST='\033[0m'
+
+printf "\n${CYN}[.] ${LBLU}Checking your JS/JSX code...${RST}\n"
+npm run lint:js:fix
+
+printf "${CYN}[.] ${LBLU}Checking your CSS...${RST}\n"
+npm run lint:css:fix
+
+printf "${LPRP}[.] Prettifying your files...${RST}\n\n"
+FILES=$(git diff --staged --name-only --diff-filter=ACMR | sed 's| |\\ |g')
+[ -z "$FILES" ] && exit 0
+echo "$FILES" | xargs ./node_modules/.bin/prettier --ignore-unknown --write
+
+printf "\n${CYN}[.] ${LBLU}Cleaning up package.json...${RST}\n\n"
+npm run sort
+
+printf "\n${LGRN}[+] ${GRN}Successfully linted your commit! Staging Changes...${RST}\n\n"
+git add $FILES
