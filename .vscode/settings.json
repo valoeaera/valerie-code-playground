@@ -1,5 +1,11 @@
 {
-  "cSpell.words": ["knowledgebase", "Parens", "Roudebush", "stylelint"],
+  "cSpell.words": [
+    "knowledgebase",
+    "optimizelegibility",
+    "Parens",
+    "Roudebush",
+    "stylelint"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnPaste": false, // required
   "editor.formatOnType": false, // required
