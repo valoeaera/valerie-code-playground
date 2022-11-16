@@ -6,8 +6,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
-  tagline: "Dinosaurs are cool",
+  title: "Val's Knowledgebase",
+  tagline: "Documentation for all of my projects",
   url: "https://your-docusaurus-test-site.com",
   baseUrl: "/",
   onBrokenLinks: "throw",
@@ -16,8 +16,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "valoeaera", // Usually your GitHub org/user name.
+  projectName: "val-knowledgebase", // Usually your repo name.
 
   // Even if you don't use internalization, you can use this field to set useful
   // metadata like html lang. For example, if your site is Chinese, you may want
@@ -57,7 +57,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "My Site",
+        title: "Val's Knowledgebase",
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
@@ -71,7 +71,7 @@ const config = {
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/valoeaera/valerie-code-playground",
             label: "GitHub",
             position: "right",
           },
@@ -90,19 +90,19 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "Social Media",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
+                label: "YouTube",
+                href: "https://www.youtube.com/channel/UCn1CamoVUxvC-DDvyDxq0Ew",
               },
               {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/ben-roudebush/",
               },
               {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "Tumblr",
+                href: "https://www.tumblr.com/blog/valoeaera",
               },
             ],
           },
@@ -115,12 +115,12 @@ const config = {
               },
               {
                 label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                href: "https://github.com/valoeaera/valerie-code-playground",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Valerie Roudebush. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
