@@ -41,3 +41,28 @@ if (c === undefined) {
 }
 
 // Don't set things to undefined!
+
+/* Function Invocation and the Execution Stack
+Function Invocation (executing a function) creates a new execution context on top of the global execution context
+  - Executes code
+  - Space for variables and functions
+  - Nested functions create their own execution contexts on top of the nestee (FILO)
+Variable Environments (Scope)
+  - Each "C" below has its own variable environment
+  - Each "C" has a different value in each execution context
+*/
+
+const B = () => {
+  var C = 3;
+  console.log("Function B:", C);
+};
+
+const A = () => {
+  var C = 2;
+  console.log("Function A:", C);
+  B();
+};
+
+var C = 1;
+console.log("Global:", C);
+A();
