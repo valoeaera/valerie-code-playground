@@ -1,7 +1,7 @@
 {
-  "name": "district-docket",
+  "name": "nuzlocke-tracker",
   "version": "0.0.1",
-  "description": "Calendar application",
+  "description": "Logging and Documentation for Pokemon Nuzlockes",
   "keywords": [
     "React",
     "JS",
@@ -30,11 +30,12 @@
     "@mui/icons-material": "^5.10.14",
     "@mui/material": "^5.10.14",
     "react": "^18.2.0",
-    "vite": "^3.2.4"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3"
   },
   "devDependencies": {
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^2.2.0",
-    "react-dom": "^18.2.0"
+    "vite": "^3.2.4"
   }
 }
