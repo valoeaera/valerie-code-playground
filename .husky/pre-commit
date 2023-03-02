@@ -35,4 +35,5 @@ printf "\n${CYN}[.] ${LBLU}Cleaning up package.json...${RST}\n\n"
 npm run sort
 
 printf "\n${LGRN}[+] ${GRN}Successfully linted your commit! Staging Changes...${RST}\n\n"
+printf "$FILES\n"
 git add $FILES
