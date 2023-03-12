@@ -67,7 +67,7 @@ const config = {
             type: "doc",
             docId: "intro",
             position: "left",
-            label: "Tutorial",
+            label: "Docs",
           },
           { to: "/blog", label: "Blog", position: "left" },
           {
@@ -84,7 +84,7 @@ const config = {
             title: "Docs",
             items: [
               {
-                label: "Tutorial",
+                label: "Docs",
                 to: "/docs/intro",
               },
             ],
@@ -98,7 +98,7 @@ const config = {
               },
               {
                 label: "LinkedIn",
-                href: "https://www.linkedin.com/in/ben-roudebush/",
+                href: "https://www.linkedin.com/in/val-roudebush/",
               },
               {
                 label: "Tumblr",
