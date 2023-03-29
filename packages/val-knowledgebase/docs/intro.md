@@ -1,47 +1,53 @@
 ---
+title: My Linux Computer Setup
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+I've had to setup my computer so many times that I'm gonna document it here for when I inevitably need to do it again.
 
-Let's discover **Docusaurus in less than 5 minutes**.
+Last revised: 12 March 2023
 
-## Getting Started
+### Operating System
 
-Get started by **creating a new site**.
+I use [Linux Mint Cinnamon Edition](https://linuxmint.com/download.php). Download it from that link and, if you're on another Mint machine, you can `Right Click the ISO -> Create USB Installation` and follow the instructions.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
+### Terminal
 
-### What you'll need
+1. Install zsh: `sudo apt install zsh`.
+1. Confirm zsh binary path: `which zsh`.
+1. Change shell to that path: `chsh -s /usr/bin/zsh` <- Replace `/usr/bin/zsh` with the output of the above command.
+1. Restart the computer.
+1. Install ohmyzsh: `sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`.
+1. Install powerlevel10k: `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k`.
+1. Use powerlevel10k theme: Set `ZSH_THEME="powerlevel10k/powerlevel10k"` in `~/.zshrc`.
+1. Restart zsh with `exec zsh`.
+1. Follow the powerlevel10k instructions.
 
-- [Node.js](https://nodejs.org/en/download/) version 16.14 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+### Firefox
 
-## Generate a new site
+1. Open Firefox.
+1. Click the three horizontal bar option icon.
+1. Click `Sign In` to sync settings.
 
-Generate a new Docusaurus site using the **classic template**.
+### VSCode
 
-The classic template will automatically be added to your project after you run the command:
+1. Download `.deb` package from [VScode's website](https://code.visualstudio.com/docs/?dv=linux64_deb).
+1. Double-click that downloaded package.
+1. Clone all your [Github repos](https://github.com/valoeaera?tab=repositories) again.
+1. Install languages: `sudo apt install nodejs && sudo apt install npm && sudo apt install php`.
+1. Open Settings Sync: `File -> Preferences -> Turn on Settings Sync...`.
+1. Click `Sign In & Sync` & `Sign in with Github`.
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+### Software Manager Stuff
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- Discord
+- Spotify
 
-The command also installs all necessary dependencies you need to run Docusaurus.
+### Node JS Issues
 
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+1. `curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash - && sudo apt install -y nodejs`
+1. `sudo apt install nodejs -y`
+1. `sudo dpkg -i --force-overwrite /var/cache/apt/archives/nodejs_19.7.0-deb-1nodesource1_amd64.deb`
+1. `sudo apt -f install`
+1. `sudo apt autoremove`
+1. `node -v`
