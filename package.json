@@ -91,7 +91,8 @@
       "node_modules/**"
     ],
     "rules": {
-      "selector-class-pattern": null
+      "custom-property-pattern": "^[#.:]*(--|[a-z])*[a-z]+(-[a-z]+)*",
+      "selector-class-pattern": "^[#.:]*(--|[a-z])*[a-z]+(-[a-z]+)*"
     }
   },
   "dependencies": {},

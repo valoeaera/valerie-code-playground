@@ -1,8 +1,29 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --cloudySkyGreyD30: #2c2722;
+  --cloudySkyGreyD15: #352f2a;
+  --cloudySkyGrey: #3e3731;
+  --cloudySkyGreyL15: #5b5550;
+  --cloudySkyGreyL30: #78736e;
+  --sandyBeachYellowD30: #73512d;
+  --sandyBeachYellowD15: #8c6236;
+  --sandyBeachYellow: #a47340;
+  --sandyBeachYellowL15: #b2885c;
+  --sandyBeachYellowL30: #bf9d79;
+  --coolOceanBlueD75: #24283a;
+  --coolOceanBlueD60: #3a405c;
+  --coolOceanBlueD45: #4f587e;
+  --coolOceanBlueD30: #6570a1;
+  --coolOceanBlueD15: #7b88c4;
+  --coolOceanBlue: #90a0e6;
+  --coolOceanBlueL15: #a1aeea;
+  --coolOceanBlueL30: #b1bced;
+  --coolOceanBlueL45: #c2cbf1;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cloudySkyGrey);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .logo {
@@ -18,28 +39,4 @@
 
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

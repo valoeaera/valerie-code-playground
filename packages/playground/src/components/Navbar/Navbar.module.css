@@ -1,3 +1,9 @@
-.temp {
-  height: 100%;
+.navbar-wrapper {
+  width: 100%;
+  background-color: var(--cloudySkyGreyD30);
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }

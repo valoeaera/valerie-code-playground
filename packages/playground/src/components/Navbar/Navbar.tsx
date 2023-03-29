@@ -1,25 +1,30 @@
 // React Imports
 import React from "react";
-import propTypes from "prop-types";
 
 // Styling, Images, and Colors
 import styles from "./Navbar.module.css";
 
-const PageLink = (title: string, link: string) => {
-  return <a href={link}>{title}</a>;
+const PageLink = (props: { title: string; url: string }) => {
+  return <a href={props.url}>{props.title}</a>;
 };
 
-const Navbar = (pages: object[]) => {
+const Navbar = (props: {
+  pages: { title: string; url: string; component: any }[];
+}) => {
   return (
-    <div className={styles["navbar-wrapper"]}>
+    <nav className={styles["navbar-wrapper"]}>
       <div id="logo-box"></div>
       <div id="pages-box">
-        {pages.map((page) => {
-          return;
+        {props.pages.map((page: { title: string; url: string }) => {
+          return (
+            <PageLink key={page.title} title={page.title} url={page.url} />
+          );
         })}
       </div>
       <div id="links-box"></div>
       <div id="profile-box"></div>
-    </div>
+    </nav>
   );
 };
+
+export default Navbar;
