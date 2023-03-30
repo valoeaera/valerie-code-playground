@@ -1,16 +1,17 @@
 // React Imports
-import React, { Suspense } from "react";
+import React, { lazy, Suspense } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 // Component Imports
 import { Navbar } from "./components";
-import TestPage from "./pages/TestPage";
 
 // Styling, Images, and Colors
 import "./App.css";
 import HEX_CODES from "../../../colors/valColorLibrary";
 
 const App = () => {
+  const TestPage = lazy(() => import("./pages/TestPage"));
+
   const pages = [
     {
       title: "Home",
@@ -20,7 +21,7 @@ const App = () => {
     {
       title: "Shapes",
       url: "/shapes",
-      component: <div></div>,
+      component: <TestPage />,
     },
   ];
 
