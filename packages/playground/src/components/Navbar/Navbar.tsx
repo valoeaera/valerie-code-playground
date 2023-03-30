@@ -1,28 +1,57 @@
 // React Imports
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 // Styling, Images, and Colors
 import styles from "./Navbar.module.css";
 
-const PageLink = (props: { title: string; url: string }) => {
-  return <a href={props.url}>{props.title}</a>;
-};
+// Icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
+import Github from "../../assets/github.svg";
+import LinkedIn from "../../assets/linkedin.svg";
+import YouTube from "../../assets/youtube.svg";
 
 const Navbar = (props: {
   pages: { title: string; url: string; component: any }[];
 }) => {
   return (
     <nav className={styles["navbar-wrapper"]}>
-      <div id="logo-box"></div>
-      <div id="pages-box">
+      <div id={styles["logo-box"]}>
+        <FontAwesomeIcon icon={faFeatherAlt} />
+      </div>
+      <div id={styles["pages-box"]}>
         {props.pages.map((page: { title: string; url: string }) => {
           return (
-            <PageLink key={page.title} title={page.title} url={page.url} />
+            <NavLink
+              key={page.title}
+              to={page.url}
+              className={({ isActive }) =>
+                isActive ? styles["active-link"] : styles["inactive-link"]
+              }>
+              {page.title}
+            </NavLink>
           );
         })}
       </div>
-      <div id="links-box"></div>
-      <div id="profile-box"></div>
+      <div id={styles["links-box"]}>
+        <a
+          href="https://www.youtube.com/channel/UCn1CamoVUxvC-DDvyDxq0Ew"
+          target="_blank"
+          rel="noreferrer">
+          <img alt="youtube" src={YouTube}></img>
+        </a>
+        <a href="https://github.com/valoeaera" target="_blank" rel="noreferrer">
+          <img alt="github" src={Github}></img>
+        </a>
+        <a
+          href="https://www.linkedin.com/in/val-roudebush/"
+          target="_blank"
+          rel="noreferrer">
+          <img alt="linkedin" src={LinkedIn}></img>
+        </a>
+      </div>
+      <div id={styles["profile-box"]}></div>
     </nav>
   );
 };

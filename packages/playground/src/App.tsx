@@ -10,10 +10,6 @@ import TestPage from "./pages/TestPage";
 import "./App.css";
 import HEX_CODES from "../../../colors/valColorLibrary";
 
-// Icons
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFeatherAlt } from "@fortawesome/free-solid-svg-icons";
-
 const App = () => {
   const pages = [
     {
@@ -24,11 +20,7 @@ const App = () => {
     {
       title: "Shapes",
       url: "/shapes",
-      component: (
-        <div>
-          <FontAwesomeIcon icon={faFeatherAlt} />
-        </div>
-      ),
+      component: <div></div>,
     },
   ];
 
