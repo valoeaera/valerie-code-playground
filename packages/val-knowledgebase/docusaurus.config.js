@@ -56,15 +56,7 @@ const config = {
     ],
   ],
 
-  plugins: [
-    require.resolve("@cmfcmf/docusaurus-search-local"),
-    [
-      "docusaurus2-dotenv",
-      {
-        systemvars: true,
-      },
-    ],
-  ],
+  plugins: [require.resolve("@cmfcmf/docusaurus-search-local")],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -84,7 +76,7 @@ const config = {
             position: "left",
             label: "Tutorial",
           },
-          { to: "/challenges/tags", label: "Challenges", position: "left" },
+          { to: "/challenges", label: "Challenges", position: "left" },
           {
             href: "https://github.com/valoeaera",
             label: "GitHub",
@@ -118,7 +110,7 @@ const config = {
             items: [
               {
                 label: "Challenges",
-                to: "/challenges/tags",
+                to: "/challenges",
               },
             ],
           },

@@ -7,6 +7,8 @@ tags: [crackmes, reverse]
 
 ![](./screens/00-chal-info.png)
 
+<!--truncate-->
+
 ## Static Analysis
 
 ![](./screens/01-file.png)

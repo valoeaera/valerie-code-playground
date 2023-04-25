@@ -7,6 +7,8 @@ tags: [crackmes, reverse]
 
 ![](./screens/challenge-info.PNG)
 
+<!--truncate-->
+
 ## Static Analysis
 
 ![](./screens/starting-point.png)
@@ -64,5 +66,8 @@ Then, the program prints `Enter your key: ` and waits for user input. That input
 When giving the program a multiple of 1223 (like 0), I got the success message even though the input was purely numeric (not tripping the bug discussed earlier). Using python to give the program hex input also shows this functionality.
 
 While it was somewhat disappointing that the program had a very obvious flaw, it is true to real life, where malware is often very rough and contains bugs. I hope to tackle more difficult crackmes yet this week.
+<<<<<<< HEAD
 
-A simpler version of this writeup that I submitted to crackmes is available [here](./writeup.txt).
+# A simpler version of this writeup that I submitted to crackmes is available [here](./writeup.txt).
+
+> > > > > > > e28816d (feat: add recent htb reports & reversing reports to docusaurus blog)

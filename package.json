@@ -85,7 +85,7 @@
       "stylelint-config-prettier"
     ],
     "ignoreFiles": [
-      "build/**",
+      "**/build/**",
       "node_modules/**"
     ],
     "rules": {

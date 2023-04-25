@@ -15,6 +15,8 @@ Disclaimer: This repository hosts actual malware, exercise due caution.
 
 Performed: 20 April 2023 by valoeaera
 
+<!--truncate-->
+
 ## Static Analysis
 
 I started off by using static analysis techniques. Some malware programmers will try to obfuscate or otherwise evade detection with their programs by packing or otherwise scrambling their code. Using some basic static analysis techniques can reveal a great deal about the file:
