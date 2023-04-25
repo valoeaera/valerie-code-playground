@@ -6,7 +6,7 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "My Site",
+  title: "Val Knowledgebase",
   tagline: "Dinosaurs are cool",
   favicon: "img/favicon.ico",
 
@@ -16,10 +16,8 @@ const config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: "facebook", // Usually your GitHub org/user name.
-  projectName: "docusaurus", // Usually your repo name.
+  organizationName: "valoeaera", // Usually your GitHub org/user name.
+  projectName: "valerie-code-playground", // Usually your repo name.
 
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -39,22 +37,32 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/valoeaera/valerie-code-playground",
         },
         blog: {
+          blogTitle: "Val's Challenge Reports",
+          blogDescription:
+            "This blog contains all of my HTB and Crackmes challenge reports",
+          blogSidebarTitle: "All posts",
+          blogSidebarCount: "ALL",
+          routeBasePath: "/challenges",
           showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: "https://github.com/valoeaera/valerie-code-playground",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
       }),
+    ],
+  ],
+
+  plugins: [
+    require.resolve("@cmfcmf/docusaurus-search-local"),
+    [
+      "docusaurus2-dotenv",
+      {
+        systemvars: true,
+      },
     ],
   ],
 
@@ -64,9 +72,9 @@ const config = {
       // Replace with your project's social card
       image: "img/docusaurus-social-card.jpg",
       navbar: {
-        title: "My Site",
+        title: "Val Knowledgebase",
         logo: {
-          alt: "My Site Logo",
+          alt: "Val Knowledgebase Logo",
           src: "img/logo.svg",
         },
         items: [
@@ -76,9 +84,9 @@ const config = {
             position: "left",
             label: "Tutorial",
           },
-          { to: "/blog", label: "Blog", position: "left" },
+          { to: "/challenges/tags", label: "Challenges", position: "left" },
           {
-            href: "https://github.com/facebook/docusaurus",
+            href: "https://github.com/valoeaera",
             label: "GitHub",
             position: "right",
           },
@@ -97,19 +105,11 @@ const config = {
             ],
           },
           {
-            title: "Community",
+            title: "Where am I?",
             items: [
               {
-                label: "Stack Overflow",
-                href: "https://stackoverflow.com/questions/tagged/docusaurus",
-              },
-              {
-                label: "Discord",
-                href: "https://discordapp.com/invite/docusaurus",
-              },
-              {
-                label: "Twitter",
-                href: "https://twitter.com/docusaurus",
+                label: "GitHub",
+                href: "https://github.com/valoeaera",
               },
             ],
           },
@@ -117,17 +117,13 @@ const config = {
             title: "More",
             items: [
               {
-                label: "Blog",
-                to: "/blog",
-              },
-              {
-                label: "GitHub",
-                href: "https://github.com/facebook/docusaurus",
+                label: "Challenges",
+                to: "/challenges/tags",
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Val Roudebush | Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
