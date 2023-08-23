@@ -1,0 +1,53 @@
+.userForm {
+  margin: 25px auto;
+  width: 50%;
+  background-color: #ffe0b0;
+  padding: 10px 22px;
+}
+
+.uglyForm {
+  margin: auto;
+  width: 95%;
+  padding: 10px;
+}
+
+.userForm__field {
+    margin: 10px auto;
+}
+
+
+.userForm__label {
+    margin: 10px auto;
+    width: 99%;
+    font-weight: bold;
+    color: #202320;
+}
+
+.userForm__input {
+    margin: 5px auto;
+    width: 99%;
+    height: 25px;
+}
+
+.userForm__submit {
+  margin: auto;
+  width: 100%;
+  text-align: center;
+}
+
+.userForm__submitButton {
+  margin: 10px auto;
+  border: 2px solid #202320;
+  border-radius: 12px;
+  width: 50%;
+  height: 50px;
+  background-color: #99b488;
+  font-size: 20px;
+  font-weight: bold;
+  color: #F5F5F5;
+}
+
+.invalid {
+  background-color: #ffb7b7;
+  color: red;
+}

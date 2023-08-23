@@ -1,0 +1,7 @@
+.expense-list {
+    padding: 1rem;
+    background-color: rgba(20, 30, 20, 1);
+    margin: 2rem auto;
+    width: 50rem;
+    max-width: 95%;
+}

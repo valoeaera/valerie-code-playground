@@ -1,0 +1,15 @@
+.userElement {
+    margin: 10px 0px;
+    width: 100%;
+    border: 2px solid #202320;
+    border-radius: 12px;
+    background-color: #47695B;
+}
+
+.userElement__text {
+    font-size: 16px;
+    font-weight: normal;
+    text-align: left;
+    color: #F5F5F5;
+    padding: 0px 5px;
+}
