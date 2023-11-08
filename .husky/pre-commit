@@ -20,8 +20,8 @@ LCYN='\033[1;36m'
 WHT='\033[1;37m'
 RST='\033[0m'
 
-printf "\n${CYN}[.] ${LBLU}Checking your JS/JSX code...${RST}\n"
-npm run lint:js:fix
+# printf "\n${CYN}[.] ${LBLU}Checking your JS/JSX code...${RST}\n"
+# npm run lint:js:fix
 
 printf "${CYN}[.] ${LBLU}Checking your CSS...${RST}\n"
 npm run lint:css:fix
