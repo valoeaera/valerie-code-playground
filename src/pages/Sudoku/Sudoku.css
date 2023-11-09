@@ -1,0 +1,23 @@
+#sudoku-grid {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  margin: 20px;
+  width: fit-content;
+}
+
+.box {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  border: 1px solid white;
+  width: fit-content;
+}
+
+.cell {
+  border: 1px solid grey;
+  text-align: center;
+  aspect-ratio: 1 / 1;
+  max-width: 60px;
+  max-height: 60px;
+  background-color: transparent;
+  color: white;
+}
