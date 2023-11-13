@@ -1,5 +1,8 @@
 // React Imports
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
+
+// Components
+import SudokuCell from "./SudokuCell";
 
 // Data
 import boxes from "./box.json";
@@ -13,9 +16,13 @@ const Sudoku = () => {
     cellIndex: number
   ) => {
     setBoxData((prevState) => {
-      const newVal = (event.target as HTMLInputElement).value;
-      prevState[boxIndex][cellIndex] = newVal;
-      console.log(prevState);
+      const newVal: string =
+        (event.target as HTMLInputElement).value.at(-1) ?? "0";
+      if (/^\d*$/.test(newVal)) {
+        const newState = JSON.parse(JSON.stringify(prevState));
+        newState[boxIndex][cellIndex] = newVal;
+        return newState;
+      }
       return prevState;
     });
   };
@@ -29,19 +36,13 @@ const Sudoku = () => {
             {box.map((cell, cellIdx) => {
               const cellId = `${boxId}-cell-${cellIdx + 1}`;
               return (
-                <input
+                <SudokuCell
                   key={cellId}
                   id={cellId}
-                  className="cell"
+                  box={boxIdx}
+                  cell={cellIdx}
+                  cellChangeHandler={cellChangeHandler}
                   value={cell}
-                  onChange={(event) => {
-                    event.preventDefault();
-                    console.log(event.target.value, boxIdx, cellIdx);
-                    if (event.target.value !== "") {
-                      cellChangeHandler(event, boxIdx, cellIdx);
-                    }
-                  }}
-                  type="text"
                 />
               );
             })}
